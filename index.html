@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="header"></div>
+	<div class="main"><video autoplay muted><source src="video.mp4" type="video/mp4" id="video"></video></div>
+
+<style>
+	html, body {
+		margin: 0 auto;
+		padding: 0;
+		max-width: 1920px;
+		width: 100%;
+	}
+
+	.header {
+		background: url('1.png') no-repeat center center;
+		height: 170px;
+	}
+	
+	.main {
+		position: relative;
+	}
+
+	.main video {
+		width: 100%;
+	}
+
+	.main::before {
+		content: '';
+		position: absolute;
+max-width: 1920px;
+		width: 100%;
+		top: 0;
+		height: 0;
+		background: url('2.png') no-repeat center center;
+		min-height: 1067px;
+	}
+</style>
+<script>
+	document.addEventListener('DOMContentLoaded', function(){ 
+	var vid = document.getElementById("video");
+	vid.play();	
+    // your code goes here
+}, false);
+</script>
+</body>
+</html>
